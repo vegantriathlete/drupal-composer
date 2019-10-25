@@ -1,0 +1,14 @@
+uuid: 455135b1-20a7-40f0-9ed1-a17bfd270ed8
+name: 'Drupal Composer'
+mail: marc@isaacsonwebdevelopment.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
