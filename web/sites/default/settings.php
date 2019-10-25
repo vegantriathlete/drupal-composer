@@ -762,7 +762,7 @@ $settings['entity_update_batch_size'] = 50;
  */
 $settings['entity_update_backup'] = TRUE;
 
-$config_directories['sync'] = '../config/sync/config_kiWYIz278Q0CNmWPGduY72a_cO2m9Alem66zfCuyXXtiJ0EPhSCxG1h6VU5PsWHVH64mbBb5aQ/sync';
+$config_directories['sync'] = '../config/sync';
 
 /**
  * Load local development override configuration, if available.
