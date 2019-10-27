@@ -160,16 +160,16 @@
         },
         {
             "name": "chi-teck/drupal-code-generator",
-            "version": "1.30.4",
+            "version": "1.30.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Chi-teck/drupal-code-generator.git",
-                "reference": "8b7ae331e21e58088e3e52688823692ed6471ec3"
+                "reference": "c59c31ee6d8eefe76a5d367feef902e259c90c7b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Chi-teck/drupal-code-generator/zipball/8b7ae331e21e58088e3e52688823692ed6471ec3",
-                "reference": "8b7ae331e21e58088e3e52688823692ed6471ec3",
+                "url": "https://api.github.com/repos/Chi-teck/drupal-code-generator/zipball/c59c31ee6d8eefe76a5d367feef902e259c90c7b",
+                "reference": "c59c31ee6d8eefe76a5d367feef902e259c90c7b",
                 "shasum": ""
             },
             "require": {
@@ -201,7 +201,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal code generator",
-            "time": "2019-08-25T06:39:56+00:00"
+            "time": "2019-10-27T14:27:26+00:00"
         },
         {
             "name": "composer/installers",
@@ -5627,12 +5627,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vegantriathlete/style_paragraphs.git",
-                "reference": "546710e57105c68140eeafda8019f8e15dfc9d9c"
+                "reference": "50406758c9f7c3b4d42f7b42ac2c03b5cc5fca56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vegantriathlete/style_paragraphs/zipball/546710e57105c68140eeafda8019f8e15dfc9d9c",
-                "reference": "546710e57105c68140eeafda8019f8e15dfc9d9c",
+                "url": "https://api.github.com/repos/vegantriathlete/style_paragraphs/zipball/50406758c9f7c3b4d42f7b42ac2c03b5cc5fca56",
+                "reference": "50406758c9f7c3b4d42f7b42ac2c03b5cc5fca56",
                 "shasum": ""
             },
             "require": {
@@ -5647,7 +5647,7 @@
                 "source": "https://github.com/vegantriathlete/style_paragraphs/tree/master",
                 "issues": "https://github.com/vegantriathlete/style_paragraphs/issues"
             },
-            "time": "2019-10-27T07:23:49+00:00"
+            "time": "2019-10-27T23:17:44+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
