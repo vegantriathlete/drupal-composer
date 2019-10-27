@@ -1,0 +1,22 @@
+uuid: db11fe51-0930-422e-b595-15dfc6587eb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.two_column_layout_webpage
+id: node.two_column_layout_webpage.promote
+field_name: promote
+entity_type: node
+bundle: two_column_layout_webpage
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

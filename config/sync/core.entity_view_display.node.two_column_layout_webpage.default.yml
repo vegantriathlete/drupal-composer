@@ -1,0 +1,41 @@
+uuid: 5b9debeb-8b91-4963-b575-0018884a522c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.two_column_layout_webpage.field_page_component
+    - field.field.node.two_column_layout_webpage.field_side_bar_component
+    - node.type.two_column_layout_webpage
+  module:
+    - entity_reference_revisions
+    - user
+id: node.two_column_layout_webpage.default
+targetEntityType: node
+bundle: two_column_layout_webpage
+mode: default
+content:
+  field_page_component:
+    weight: 101
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_side_bar_component:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

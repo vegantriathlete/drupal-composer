@@ -1,0 +1,21 @@
+uuid: dcf0a357-a1c8-4923-b919-a20390de0083
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.two_column_layout_webpage
+  module:
+    - user
+id: node.two_column_layout_webpage.teaser
+targetEntityType: node
+bundle: two_column_layout_webpage
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,11 @@
+uuid: 161331e8-09b2-40f2-814f-9ffbee0ee580
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.two_column_layout_webpage
+id: node.two_column_layout_webpage
+target_entity_type_id: node
+target_bundle: two_column_layout_webpage
+default_langcode: site_default
+language_alterable: false

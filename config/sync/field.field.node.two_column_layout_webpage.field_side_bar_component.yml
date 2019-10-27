@@ -1,0 +1,52 @@
+uuid: 1fb3f679-865c-43fb-8115-5c8f3739d85e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_side_bar_component
+    - node.type.two_column_layout_webpage
+    - paragraphs.paragraphs_type.list
+    - paragraphs.paragraphs_type.paragraph
+    - paragraphs.paragraphs_type.text_field
+    - paragraphs.paragraphs_type.three_column_table
+  module:
+    - entity_reference_revisions
+id: node.two_column_layout_webpage.field_side_bar_component
+field_name: field_side_bar_component
+entity_type: node
+bundle: two_column_layout_webpage
+label: 'Side Bar Component'
+description: "Each sidebar component will be rendered on the page in the order it appears here. Drag and drop the fields to reorder them. This is an example of \"translation of paragraphs\" as opposed to \"localization of paragraphs.\" The translation happens on the Paragraph Types' fields themselves, not on this field in this bundle. This is limited to the following Paragraph Types:<br>\r\nList<br>\r\nParagraph<br>\r\nText Field<br>\r\nThree Column Table"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      list: list
+      paragraph: paragraph
+      text_field: text_field
+      three_column_table: three_column_table
+    target_bundles_drag_drop:
+      list:
+        enabled: true
+        weight: 7
+      paragraph:
+        enabled: true
+        weight: 8
+      table_cell:
+        weight: 9
+        enabled: false
+      text_field:
+        enabled: true
+        weight: 10
+      three_column_row:
+        weight: 11
+        enabled: false
+      three_column_table:
+        enabled: true
+        weight: 12
+field_type: entity_reference_revisions

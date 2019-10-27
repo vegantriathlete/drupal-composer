@@ -1,0 +1,17 @@
+uuid: 920cf997-c3fc-4a1d-a01c-95d57027ee79
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Two Column Layout Webpage'
+type: two_column_layout_webpage
+description: 'This is the bundle that provides data for the two column layout template.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
