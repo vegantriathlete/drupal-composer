@@ -12,8 +12,8 @@ _core:
   default_config_hash: 8zRjTNbfNAJ94lQpZDu6MkyD87GYJ2zpH9VQPVmRbcM
 id: style_paragraphs_footer
 theme: style_paragraphs
-region: sidebar_first
-weight: 0
+region: footer_first
+weight: -5
 provider: null
 plugin: 'system_menu_block:footer'
 settings:

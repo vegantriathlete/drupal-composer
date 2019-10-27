@@ -1,0 +1,24 @@
+uuid: dffed5c3-1aa5-4ebc-8d9f-be9ee65a4657
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.content
+  module:
+    - views
+  theme:
+    - style_paragraphs
+id: views_block__content_block_1
+theme: style_paragraphs
+region: highlighted
+weight: 0
+provider: null
+plugin: 'views_block:content-block_1'
+settings:
+  id: 'views_block:content-block_1'
+  label: 'Content List'
+  provider: views
+  label_display: visible
+  views_label: 'Content List'
+  items_per_page: none
+visibility: {  }
