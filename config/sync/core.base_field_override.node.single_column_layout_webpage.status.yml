@@ -1,0 +1,22 @@
+uuid: dbb0490d-8b96-468c-8276-2198e50af253
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.single_column_layout_webpage
+id: node.single_column_layout_webpage.status
+field_name: status
+entity_type: node
+bundle: single_column_layout_webpage
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

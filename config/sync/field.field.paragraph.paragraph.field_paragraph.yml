@@ -1,0 +1,19 @@
+uuid: 4be8d848-e495-4a26-8981-3124571d30df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph
+    - paragraphs.paragraphs_type.paragraph
+id: paragraph.paragraph.field_paragraph
+field_name: field_paragraph
+entity_type: paragraph
+bundle: paragraph
+label: 'Paragraph Text'
+description: 'I have found that it is much better for the UX and the markup to make this limited to 1.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

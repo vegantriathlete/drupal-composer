@@ -1,0 +1,21 @@
+uuid: 8272ce56-4792-4224-9a1e-f622326ffb3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.single_column_layout_webpage
+  module:
+    - user
+id: node.single_column_layout_webpage.teaser
+targetEntityType: node
+bundle: single_column_layout_webpage
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

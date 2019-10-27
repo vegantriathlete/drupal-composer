@@ -1,0 +1,17 @@
+uuid: b5d2322d-df22-457d-9532-164ad43a5ebf
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Single Column Layout Webpage'
+type: single_column_layout_webpage
+description: 'This is the bundle that provides data for the single column layout template.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

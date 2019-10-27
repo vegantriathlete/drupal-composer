@@ -1,0 +1,46 @@
+uuid: 004df251-9675-43f8-b48b-dce841ce09f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_table_row
+    - paragraphs.paragraphs_type.three_column_row
+    - paragraphs.paragraphs_type.three_column_table
+  module:
+    - entity_reference_revisions
+id: paragraph.three_column_table.field_table_row
+field_name: field_table_row
+entity_type: paragraph
+bundle: three_column_table
+label: 'Table Row Data'
+description: 'This is limited to the "Three Column Table Row" Paragraph Type.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      three_column_row: three_column_row
+    target_bundles_drag_drop:
+      list:
+        weight: 6
+        enabled: false
+      paragraph:
+        weight: 7
+        enabled: false
+      table_cell:
+        weight: 8
+        enabled: false
+      text_field:
+        weight: 9
+        enabled: false
+      three_column_table:
+        weight: 10
+        enabled: false
+      three_column_row:
+        enabled: true
+        weight: 11
+field_type: entity_reference_revisions

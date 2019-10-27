@@ -1,0 +1,22 @@
+uuid: dc167f77-ccdb-4d33-b461-8a145574f532
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.single_column_layout_webpage
+id: node.single_column_layout_webpage.promote
+field_name: promote
+entity_type: node
+bundle: single_column_layout_webpage
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

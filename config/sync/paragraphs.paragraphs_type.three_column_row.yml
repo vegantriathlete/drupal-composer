@@ -1,0 +1,9 @@
+uuid: fdcf2ed1-9d72-4963-82b3-443a8edb9791
+langcode: en
+status: true
+dependencies: {  }
+id: three_column_row
+label: 'Three Column Row Element'
+icon_uuid: null
+description: 'This is the Paragraph Type that is used with the "Three Column Table" Paragraph Type'
+behavior_plugins: {  }

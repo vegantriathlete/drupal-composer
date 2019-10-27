@@ -1,0 +1,46 @@
+uuid: 9e527f63-36f1-47ec-9b32-486c1db9f46b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cell_three
+    - paragraphs.paragraphs_type.table_cell
+    - paragraphs.paragraphs_type.three_column_row
+  module:
+    - entity_reference_revisions
+id: paragraph.three_column_row.field_cell_three
+field_name: field_cell_three
+entity_type: paragraph
+bundle: three_column_row
+label: 'Cell Three Element'
+description: 'This is limited to the "Table Cell" Paragraph Type.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      table_cell: table_cell
+    target_bundles_drag_drop:
+      list:
+        weight: 7
+        enabled: false
+      paragraph:
+        weight: 8
+        enabled: false
+      table_cell:
+        enabled: true
+        weight: 9
+      text_field:
+        weight: 10
+        enabled: false
+      three_column_row:
+        weight: 11
+        enabled: false
+      three_column_table:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

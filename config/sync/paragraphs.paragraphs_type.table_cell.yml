@@ -1,0 +1,9 @@
+uuid: d403a8ae-5ff9-43a5-8f19-5dbf42f80fbe
+langcode: en
+status: true
+dependencies: {  }
+id: table_cell
+label: 'Table Cell'
+icon_uuid: null
+description: 'Build your various Table paragraph types with table cells. Each cell has an attribute that indicates whether that cell should be marked as a table header (th) element. If you don''t check the box it will be marked as a table data (td) element.'
+behavior_plugins: {  }

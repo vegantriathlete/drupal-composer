@@ -1,0 +1,9 @@
+uuid: ec4def29-00ba-4896-9bbe-eec3f3de558f
+langcode: en
+status: true
+dependencies: {  }
+id: paragraph
+label: 'Paragraph Component'
+icon_uuid: null
+description: 'A block of text.'
+behavior_plugins: {  }

@@ -1,0 +1,22 @@
+uuid: 6806e080-030f-4065-b790-23174f8595c7
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - style_paragraphs
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: style_paragraphs_content
+theme: style_paragraphs
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

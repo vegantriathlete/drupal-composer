@@ -1,0 +1,23 @@
+uuid: cdf223aa-82a7-4faa-a164-9ecb862e0081
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_table_header
+    - paragraphs.paragraphs_type.table_cell
+id: paragraph.table_cell.field_table_header
+field_name: field_table_header
+entity_type: paragraph
+bundle: table_cell
+label: 'Table Header'
+description: 'Check the box to indicate that this cell should be marked up with a th instead of a td'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: th
+  off_label: td
+field_type: boolean

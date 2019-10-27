@@ -1,0 +1,24 @@
+uuid: 51f100ad-3449-43ad-9848-697a471cb3f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.three_column_table.field_table_row
+    - paragraphs.paragraphs_type.three_column_table
+  module:
+    - entity_reference_revisions
+id: paragraph.three_column_table.default
+targetEntityType: paragraph
+bundle: three_column_table
+mode: default
+content:
+  field_table_row:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

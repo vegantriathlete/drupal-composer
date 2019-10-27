@@ -1,0 +1,9 @@
+uuid: db2148c8-aaf8-483c-b087-e48f274ea9d6
+langcode: en
+status: true
+dependencies: {  }
+id: list
+label: 'List Component'
+icon_uuid: null
+description: 'This can be either an unordered or ordered list depending on how you set the attribute.'
+behavior_plugins: {  }

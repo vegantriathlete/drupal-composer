@@ -1,0 +1,9 @@
+uuid: ece8fab6-296c-4b0a-8af6-a5a06a749db0
+langcode: en
+status: true
+dependencies: {  }
+id: three_column_table
+label: 'Three Column Table Component'
+icon_uuid: null
+description: 'Specify data one row at a time'
+behavior_plugins: {  }

@@ -1,0 +1,23 @@
+uuid: 1a081fcb-be17-4456-9aaa-3b39ec2d48ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ordered_list
+    - paragraphs.paragraphs_type.list
+id: paragraph.list.field_ordered_list
+field_name: field_ordered_list
+entity_type: paragraph
+bundle: list
+label: 'Ordered List'
+description: 'Check this box to indicate that the list should be rendered as an ordered list.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: ol
+  off_label: ul
+field_type: boolean

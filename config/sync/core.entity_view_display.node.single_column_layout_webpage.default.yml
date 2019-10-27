@@ -1,0 +1,31 @@
+uuid: 98f34cf2-8ccd-4758-8923-91bcf51441ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.single_column_layout_webpage.field_page_component
+    - node.type.single_column_layout_webpage
+  module:
+    - entity_reference_revisions
+    - user
+id: node.single_column_layout_webpage.default
+targetEntityType: node
+bundle: single_column_layout_webpage
+mode: default
+content:
+  field_page_component:
+    weight: 101
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

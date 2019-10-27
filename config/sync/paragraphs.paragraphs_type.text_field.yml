@@ -1,0 +1,9 @@
+uuid: 90f501b8-0003-40e7-a7ad-439b628168a9
+langcode: en
+status: true
+dependencies: {  }
+id: text_field
+label: 'Text field Component'
+icon_uuid: null
+description: 'This is a simple, single line text field that won''t be inherently wrapped in any markup.'
+behavior_plugins: {  }
