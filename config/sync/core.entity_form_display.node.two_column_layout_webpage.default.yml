@@ -7,8 +7,41 @@ dependencies:
     - field.field.node.two_column_layout_webpage.field_side_bar_component
     - node.type.two_column_layout_webpage
   module:
+    - field_group
     - paragraphs
     - path
+third_party_settings:
+  field_group:
+    group_main_content:
+      children:
+        - field_page_component
+      parent_name: ''
+      weight: 8
+      format_type: tab
+      format_settings:
+        direction: horizontal
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Main Content'
+      region: content
+    group_sidebar_content:
+      children:
+        - field_side_bar_component
+      parent_name: ''
+      weight: 9
+      format_type: tab
+      format_settings:
+        direction: horizontal
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Sidebar content'
+      region: content
 id: node.two_column_layout_webpage.default
 targetEntityType: node
 bundle: two_column_layout_webpage
@@ -16,12 +49,12 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
   field_page_component:
-    weight: 121
+    weight: 9
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -34,7 +67,7 @@ content:
     region: content
   field_side_bar_component:
     type: entity_reference_paragraphs
-    weight: 122
+    weight: 10
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -46,14 +79,14 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 1
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -61,26 +94,26 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 4
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
+    weight: 7
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 5
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
@@ -88,7 +121,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 2
     settings:
       match_operator: CONTAINS
       size: 60
