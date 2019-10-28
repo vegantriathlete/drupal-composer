@@ -11,8 +11,8 @@ dependencies:
     - style_paragraphs
 id: views_block__content_block_1
 theme: style_paragraphs
-region: highlighted
-weight: 0
+region: featured_bottom_first
+weight: -5
 provider: null
 plugin: 'views_block:content-block_1'
 settings:
