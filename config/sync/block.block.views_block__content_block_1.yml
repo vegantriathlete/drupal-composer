@@ -5,6 +5,7 @@ dependencies:
   config:
     - views.view.content
   module:
+    - system
     - views
   theme:
     - style_paragraphs
@@ -21,4 +22,9 @@ settings:
   label_display: visible
   views_label: 'Content List'
   items_per_page: none
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/user/*\r\n/admin/*"
+    negate: true
+    context_mapping: {  }
