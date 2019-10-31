@@ -1,145 +1,86 @@
-# Composer template for Drupal projects
+# Experimenting with Composer, Version control, Configuration management, and Paragraphs
 
-[![Build Status](https://travis-ci.org/drupal-composer/drupal-project.svg?branch=8.x)](https://travis-ci.org/drupal-composer/drupal-project)
-
-This project template provides a starter kit for managing your site
-dependencies with [Composer](https://getcomposer.org/).
-
-If you want to know how to use it as replacement for
-[Drush Make](https://github.com/drush-ops/drush/blob/8.x/docs/make.md) visit
-the [Documentation on drupal.org](https://www.drupal.org/node/2471553).
+I have used the drupal-composer/drupal-project template to build this project.
+I'm (obviously) using Git for version control.
+I'm using paragraphs to define structured data for "components" of a web page.
+I have built a simple custom theme to render the paragraph components.
+The theme is hosted on github and is managed with my composer configuration.
+I'm keeping track of all of my site building with configuration management.
 
 ## Usage
 
-First you need to [install composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx).
-
-> Note: The instructions below refer to the [global composer installation](https://getcomposer.org/doc/00-intro.md#globally).
-You might need to replace `composer` with `php composer.phar` (or similar)
-for your setup.
+First you need to [install git ](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [install composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx).
 
 After that you can create the project:
 
 ```
-composer create-project drupal-composer/drupal-project:8.x-dev some-dir --no-interaction
+git clone https://github.com/vegantriathlete/drupal-composer.git
+cd drupal-composer
 ```
 
-With `composer require ...` you can download new dependencies to your
-installation.
+In order to use configuration management, you'll need to build your site
+with the same database as I've built the site. I have included a database
+backup at /database/drupal_composer.tar.gz. Import this database into
+your database server.
+
+I have committed a settings.php that looks for settings.local.php. You will
+need to create your own settings.local.php and specify your database
+credentials as well as the hash salt. You might also want to define your
+trusted hosts. Here is an example of the information you might use.
+You *do* want to use the exact same hash salt as I have specified.
+You will need to modify the trusted host and database credentials
+to match your own environment.
 
 ```
-cd some-dir
-composer require drupal/devel:~1.0
+<?php
+
+// @codingStandardsIgnoreFile
+
+/**
+ * @file
+ * Local development override configuration feature.
+ *
+ * For more options you might wish to set see
+ * web/sites/example.settings.local.php.
+ */
+
+$settings['hash_salt'] = 'dJNE4KCEspkO-trVXzEAg4QMYNufhXe0XVIUP-FEm13r9_AAJbNJOT4UKs6dfd9R_I4arxh9og';
+
+$settings['trusted_host_patterns'] = [
+  '^drupal-composer$',
+];
+$databases['default']['default'] = array (
+  'database' => 'drupal_composer',
+  'username' => 'marc',
+  'password' => 'marc',
+  'prefix' => '',
+  'host' => 'localhost',
+  'port' => '3306',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);
 ```
 
-The `composer create-project` command passes ownership of all files to the
-project that is created. You should create a new git repository, and commit
-all files not excluded by the .gitignore file.
+## Logging in to the site
 
-## What does the template do?
+The database backup has just the user 1 account.
 
-When installing the given `composer.json` some tasks are taken care of:
+username: drupal
+password: drupal
 
-* Drupal will be installed in the `web`-directory.
-* Autoloader is implemented to use the generated composer autoloader in `vendor/autoload.php`,
-  instead of the one provided by Drupal (`web/vendor/autoload.php`).
-* Modules (packages of type `drupal-module`) will be placed in `web/modules/contrib/`
-* Theme (packages of type `drupal-theme`) will be placed in `web/themes/contrib/`
-* Profiles (packages of type `drupal-profile`) will be placed in `web/profiles/contrib/`
-* Creates default writable versions of `settings.php` and `services.yml`.
-* Creates `web/sites/default/files`-directory.
-* Latest version of drush is installed locally for use at `vendor/bin/drush`.
-* Latest version of DrupalConsole is installed locally for use at `vendor/bin/drupal`.
-* Creates environment variables based on your .env file. See [.env.example](.env.example).
+## Updating to the latest version of this project
 
-## Updating Drupal Core
+I will apply all updates to the master branch only.
 
-This project will attempt to keep all of your Drupal Core files up-to-date; the
-project [drupal-composer/drupal-scaffold](https://github.com/drupal-composer/drupal-scaffold)
-is used to ensure that your scaffold files are updated every time drupal/core is
-updated. If you customize any of the "scaffolding" files (commonly .htaccess),
-you may need to merge conflicts if any of your modified files are updated in a
-new release of Drupal core.
+Follow the steps below to update the project.
 
-Follow the steps below to update your core files.
+1. cd into the project
+1. Run `git checkout master`
+1. Run `git fetch origin`
+1. Run `git merge origin/master`
 
-1. Run `composer update drupal/core webflo/drupal-core-require-dev "symfony/*" --with-dependencies` to update Drupal Core and its dependencies.
-1. Run `git diff` to determine if any of the scaffolding files have changed.
-   Review the files for any changes and restore any customizations to
-  `.htaccess` or `robots.txt`.
-1. Commit everything all together in a single commit, so `web` will remain in
-   sync with the `core` when checking out branches or running `git bisect`.
-1. In the event that there are non-trivial conflicts in step 2, you may wish
-   to perform these steps on a branch, and use `git merge` to combine the
-   updated core files with your customized files. This facilitates the use
-   of a [three-way merge tool such as kdiff3](http://www.gitshah.com/2010/12/how-to-setup-kdiff-as-diff-tool-for-git.html). This setup is not necessary if your changes are simple;
-   keeping all of your modifications at the beginning or end of the file is a
-   good strategy to keep merges easy.
-
-## Generate composer.json from existing project
-
-With using [the "Composer Generate" drush extension](https://www.drupal.org/project/composer_generate)
-you can now generate a basic `composer.json` file from an existing project. Note
-that the generated `composer.json` might differ from this project's file.
-
-
-## FAQ
-
-### Should I commit the contrib modules I download?
-
-Composer recommends **no**. They provide [argumentation against but also
-workrounds if a project decides to do it anyway](https://getcomposer.org/doc/faqs/should-i-commit-the-dependencies-in-my-vendor-directory.md).
-
-### Should I commit the scaffolding files?
-
-The [drupal-scaffold](https://github.com/drupal-composer/drupal-scaffold) plugin can download the scaffold files (like
-index.php, update.php, …) to the web/ directory of your project. If you have not customized those files you could choose
-to not check them into your version control system (e.g. git). If that is the case for your project it might be
-convenient to automatically run the drupal-scaffold plugin after every install or update of your project. You can
-achieve that by registering `@composer drupal:scaffold` as post-install and post-update command in your composer.json:
-
-```json
-"scripts": {
-    "post-install-cmd": [
-        "@composer drupal:scaffold",
-        "..."
-    ],
-    "post-update-cmd": [
-        "@composer drupal:scaffold",
-        "..."
-    ]
-},
-```
-### How can I apply patches to downloaded modules?
-
-If you need to apply patches (depending on the project being modified, a pull
-request is often a better solution), you can do so with the
-[composer-patches](https://github.com/cweagans/composer-patches) plugin.
-
-To add a patch to drupal module foobar insert the patches section in the extra
-section of composer.json:
-```json
-"extra": {
-    "patches": {
-        "drupal/foobar": {
-            "Patch description": "URL or local path to patch"
-        }
-    }
-}
-```
-### How do I switch from packagist.drupal-composer.org to packages.drupal.org?
-
-Follow the instructions in the [documentation on drupal.org](https://www.drupal.org/docs/develop/using-composer/using-packagesdrupalorg).
-
-### How do I specify a PHP version ?
-
-This project supports PHP 7.0 as minimum version (see [Drupal 8 PHP requirements](https://www.drupal.org/docs/8/system-requirements/drupal-8-php-requirements)), however it's possible that a `composer update` will upgrade some package that will then require PHP 7+.
-
-To prevent this you can add this code to specify the PHP version you want to use in the `config` section of `composer.json`:
-```json
-"config": {
-    "sort-packages": true,
-    "platform": {
-        "php": "7.0.33"
-    }
-},
-```
+## Updating your site
+1. Ensure you have first udpated to the latest version of this project
+1. Run `composer update`
+1. Run `drush cim`
+1. Run `drush cr`
