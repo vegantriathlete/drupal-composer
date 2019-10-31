@@ -81,7 +81,7 @@ Follow the steps below to update the project.
 1. Run `git merge origin/master`
 
 ## Updating your site
-1. Ensure you have first udpated to the latest version of this project
+1. Ensure you have first updated to the latest version of this project
 1. Run `composer update`
 1. Run `drush cim`
 1. Run `drush cr`
