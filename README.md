@@ -66,6 +66,7 @@ $databases['default']['default'] = array (
 The database backup has just the user 1 account.
 
 username: drupal
+
 password: drupal
 
 ## Updating to the latest version of this project
